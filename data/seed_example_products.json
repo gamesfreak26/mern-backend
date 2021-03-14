@@ -9,7 +9,7 @@
     ],
     "brand": "Living Spinal"
 }
-  {
+{
     "_id": 2,
     "name": "Compression socks",
     "price": 45,
@@ -22,7 +22,7 @@
     ],
     "brand": "Sigvaris"
 }
-  {
+{
     "_id": 3,
     "name": "Side Bed rail",
     "price": 1200,
@@ -34,7 +34,7 @@
     ],
     "brand": "Stander"
 }
-  {
+{
     "_id": 4,
     "name": "Bravo Twist Parkinson Spoon",
     "price": 280,
