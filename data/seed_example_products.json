@@ -1,0 +1,49 @@
+{
+    "_id": 1,
+    "name": "Mobility chair",
+    "price": 1200,
+    "description": "Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
+    "owner_id": 345,
+    "category": [
+        "Mobility"
+    ],
+    "brand": "Living Spinal"
+}
+  {
+    "_id": 2,
+    "name": "Compression socks",
+    "price": 45,
+    "description": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.",
+    "owner_id": 12,
+    "category": [
+        "Mobility",
+        "Hygiene",
+        "Apparel"
+    ],
+    "brand": "Sigvaris"
+}
+  {
+    "_id": 3,
+    "name": "Side Bed rail",
+    "price": 1200,
+    "description": "Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada.",
+    "owner_id": 12,
+    "category": [
+        "Bedroom",
+        "Mobility"
+    ],
+    "brand": "Stander"
+}
+  {
+    "_id": 4,
+    "name": "Bravo Twist Parkinson Spoon",
+    "price": 280,
+    "description": "Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "owner_id": 180,
+    "category": [
+        "Dining",
+        "Mobility",
+        "Hygiene"
+    ],
+    "brand": "Gyenno"
+}
