@@ -6,8 +6,8 @@ const Product = new Schema({
     description: String,
     ownerId: { type: Schema.Types.ObjectId, ref: 'Owner' },
     price: { type: Number, default: 0 },
-    category: [String],
-    currentCondition: { type: Number, default: 0 },
+    category: { type: String, enum: ['Mobility', 'Hygiene', 'Apparel', 'Bedroom', 'Dining'], required: true },
+    currentCondition: { type: String, enum: ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent'], required: true },
     brand: String
 })
 
