@@ -6,6 +6,7 @@ let expect = require("chai").expect;
 let product_id = null;
 
 before((done) => {
+    console.log("Connect to DB in ")
     connectToDb(done)
 })
 
@@ -15,18 +16,20 @@ function setupData() {
     testProduct.name = 'Test label 1'
     testProduct.description = 'testing description'
     testProduct.price = 3.5
-    testProduct.category = ['test1', 'test2', 'test3']
-    testProduct.currentCondition = 5;
+    testProduct.category = 'Mobility'
+    testProduct.currentCondition = 'Poor'
     testProduct.brand = "Test Brand"
     return Product.create(testProduct);
 }
 
-beforeEach(async function () {
-    let product = setupData()
+beforeEach(async () => {
+    console.log("Before Each")
+    let product = await setupData()
     product_id = product._id
 })
 
 after((done) => {
+    console.log("Disconnect from database")
     disconnectFromDb(done)
 })
 
@@ -36,6 +39,7 @@ function tearDownData() {
 
 // Delete test data after each test
 afterEach((done) => {
+    console.log("Teardown")
     // Execute the deleteMany query
     tearDownData().exec(() => done());
 });
@@ -50,10 +54,29 @@ describe('get all products', (done) => {
         }
 
         utilities.getAllProducts(req).exec((err, product) => {
-            let lengthOfObject = Object.keys(product).length
-            console.log(`Length of Object: ${lengthOfObject}`)
-            expect(lengthOfObject).to.equal(expectedLength)
-            done()
+
+            if (err) {
+                console.log("Error:" + err.message)
+                console.log(err.stack)
+            }
+            else {
+                let lengthOfObject = Object.keys(product).length
+                console.log(`Product: ${product}`)
+                console.log(`Length of Object: ${lengthOfObject}`)
+                expect(lengthOfObject).to.equal(expectedLength)
+                done()
+            }
+            
         })
     })
+
+    // it('should get a status code of OK', function (done)) {
+    //     let req = {
+    //         query: {}
+    //     }
+
+    //     utilities.getAllProducts(req).exec((err, product) => {
+    //         res
+    //     })
+    // }
 })
