@@ -61,22 +61,29 @@ describe('get all products', (done) => {
             }
             else {
                 let lengthOfObject = Object.keys(product).length
-                console.log(`Product: ${product}`)
-                console.log(`Length of Object: ${lengthOfObject}`)
+                
                 expect(lengthOfObject).to.equal(expectedLength)
                 done()
             }
-            
         })
     })
 
-    // it('should get a status code of OK', function (done)) {
-    //     let req = {
-    //         query: {}
-    //     }
+    it('should have the same name as the test string', function (done) {
+        const productName = 'Test label 1';
 
-    //     utilities.getAllProducts(req).exec((err, product) => {
-    //         res
-    //     })
-    // }
+        let req = {
+            query: {}
+        }
+        
+        utilities.getAllProducts(req).exec((err, product) => {
+            if (err) {
+                console.log("Error:" + err.message)
+                console.log(err.stack)
+            }
+            else {
+                expect(product[0].name).to.equal(productName)
+                done()
+            }
+        })
+    })
 })
