@@ -44,7 +44,7 @@ jobs:
       uses: actions/upload-artifact@v2.2.1
       with:
       # Artifact name
-        name: artifact
+        name: ${{ env.name }}-name	
         # A file, directory or wildcard pattern that describes what to upload
-        path: /output/bin/
+        path: ${{ github.workspace }}/artifact/**/*
         if-no-files-found: warn
